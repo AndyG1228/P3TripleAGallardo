@@ -10,6 +10,8 @@ public class WeaponController : MonoBehaviour
     public AudioClip HammerAttackSound;
     public bool IsAttacking = false;
 
+   
+
     // Start is called before the first frame update
     void Start()
     {
@@ -32,8 +34,8 @@ public class WeaponController : MonoBehaviour
     {
         IsAttacking = true;
         CanAttack = false;
-        //Animator anim = Hammer.GetComponent<Animator>();
-        //anim.SetTrigger("Attack");
+        Animator anim = Hammer.GetComponent<Animator>();
+        anim.SetTrigger("Attack");
         AudioSource ac = GetComponent<AudioSource>();
         ac.PlayOneShot(HammerAttackSound);
 

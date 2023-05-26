@@ -1,12 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
     public GameObject pauseScreen;
     private bool paused;
     public GameObject titleScreen;
+    public Button buttonRestart;
 
     // Start is called before the first frame update
     void Start()
@@ -27,6 +30,7 @@ public class GameManager : MonoBehaviour
     {
         titleScreen.gameObject.SetActive(false);
         Time.timeScale = 1;
+        
     }
 
     void ChangePaused()
@@ -44,4 +48,11 @@ public class GameManager : MonoBehaviour
             Time.timeScale = 1;
         }
     }
+
+    public void gameRestart()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        buttonRestart.gameObject.SetActive(true);
+    }
+
 }
