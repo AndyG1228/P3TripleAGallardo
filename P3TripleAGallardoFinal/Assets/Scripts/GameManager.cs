@@ -30,6 +30,7 @@ public class GameManager : MonoBehaviour
     {
         titleScreen.gameObject.SetActive(false);
         Time.timeScale = 1;
+
         
     }
 

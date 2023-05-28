@@ -20,13 +20,21 @@ public class CollisionDetection : MonoBehaviour
         }
     }
 
-    // Start is called before the first frame update
+    //Input a script that checks if the player collided with the enemy
+        //if player collides with the enemy
+                //take damage (take damage player script)
+
+
+    //make a take damage player script 
+
+
+
     void Start()
     {
         
     }
 
-    // Update is called once per frame
+   
     void Update()
     {
         
