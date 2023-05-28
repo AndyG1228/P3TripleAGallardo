@@ -6,7 +6,7 @@ public class CollisionDetection : MonoBehaviour
 {
     public WeaponController wc;
     public GameObject HitParticle;
-
+    public AudioClip HammerAttackSound;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -17,6 +17,9 @@ public class CollisionDetection : MonoBehaviour
 
             Instantiate(HitParticle, new Vector3(other.transform.position.x, other.transform.position.y, other.transform.position.z),
             other.transform.rotation);
+
+            AudioSource ac = GetComponent<AudioSource>();
+            ac.PlayOneShot(HammerAttackSound);
         }
     }
 

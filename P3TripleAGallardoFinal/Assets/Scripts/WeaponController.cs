@@ -7,7 +7,6 @@ public class WeaponController : MonoBehaviour
     public GameObject Hammer;
     public bool CanAttack = true;
     public float AttackCooldown = 1.0f;
-    public AudioClip HammerAttackSound;
     public bool IsAttacking = false;
 
    
@@ -36,8 +35,6 @@ public class WeaponController : MonoBehaviour
         CanAttack = false;
         Animator anim = Hammer.GetComponent<Animator>();
         anim.SetTrigger("Attack");
-        AudioSource ac = GetComponent<AudioSource>();
-        ac.PlayOneShot(HammerAttackSound);
 
         StartCoroutine(ResetAttackCooldown());
     }
