@@ -24,6 +24,9 @@ public class GameManager : MonoBehaviour
         {
             ChangePaused();
         }
+
+        // If Leo and Saggitarius health = 0, activate taurus GameObject
+        // If Taurus health = 0, active Next level UI screen
     }
 
     public void StartGame()

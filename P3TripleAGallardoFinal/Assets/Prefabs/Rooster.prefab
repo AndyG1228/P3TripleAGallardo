@@ -145,7 +145,6 @@ MonoBehaviour:
   Hammer: {fileID: 7957796827418017847}
   CanAttack: 1
   AttackCooldown: 1
-  HammerAttackSound: {fileID: 8300000, guid: 1e3386e845d4e8b4ca9de817f670f919, type: 3}
   IsAttacking: 0
 --- !u!1 &6746098974112367381
 GameObject:
@@ -1113,6 +1112,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   wc: {fileID: 1859074237}
   HitParticle: {fileID: 191186, guid: 079954accd64b32419ec069129c81273, type: 3}
+  HammerAttackSound: {fileID: 0}
 --- !u!4 &7957796827418123287 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7957796827297786059, guid: eb7b0d81414d6724fa971f03578cebd2, type: 3}
