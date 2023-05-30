@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641275, b: 0.5748171, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3095,7 +3095,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pauseScreen: {fileID: 1010374474}
   titleScreen: {fileID: 1831782724}
-  buttonRestart: {fileID: 0}
+  buttonRestart: {fileID: 1689568820}
 --- !u!4 &617733035
 Transform:
   m_ObjectHideFlags: 0
@@ -4933,6 +4933,7 @@ GameObject:
   m_Component:
   - component: {fileID: 989589308}
   - component: {fileID: 989589309}
+  - component: {fileID: 989589310}
   m_Layer: 5
   m_Name: HealthBar
   m_TagString: Untagged
@@ -5013,6 +5014,19 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &989589310
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 989589307}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6f931e3b481a9749aafd895cf9b72b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  slider: {fileID: 989589309}
 --- !u!1 &1010374474
 GameObject:
   m_ObjectHideFlags: 0
@@ -7360,8 +7374,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6f68036735e7b247b588c6197a93491, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerAtm: {fileID: 2081750330}
-  enemyAtm: {fileID: 1565087674}
+  playerAtm: {fileID: 0}
+  enemyAtm: {fileID: 0}
 --- !u!4 &1399285762
 Transform:
   m_ObjectHideFlags: 0
@@ -8125,8 +8139,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d22ed6b360b7a0948a1a4f210c728872, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 2
-  attack: 2
+  health: 0
+  attack: 0
+  maxHealth: 0
+  healthBar: {fileID: 0}
 --- !u!1 &1689568818
 GameObject:
   m_ObjectHideFlags: 0
@@ -11454,19 +11470,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 6746098974112556803, guid: 7c19f05cc9f01f849bd75454fd7b27fe, type: 3}
   m_PrefabInstance: {fileID: 27204404}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &2081750324
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2081750314}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a6f931e3b481a9749aafd895cf9b72b6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  slider: {fileID: 989589309}
 --- !u!82 &2081750329
 AudioSource:
   m_ObjectHideFlags: 0
@@ -11563,20 +11566,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &2081750330
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2081750314}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d22ed6b360b7a0948a1a4f210c728872, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 3
-  attack: 3
 --- !u!1 &2139015976
 GameObject:
   m_ObjectHideFlags: 0

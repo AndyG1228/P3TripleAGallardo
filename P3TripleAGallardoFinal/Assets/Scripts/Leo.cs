@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class Leo : MonoBehaviour
 {
+    /*public int health;
+    public int attack;
+    public int maxHealth;*/
+
     // Start is called before the first frame update
     void Start()
     {
