@@ -1,16 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.AI;
-using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
-
-public class Taurus : MonoBehaviour
+public class Sun : MonoBehaviour
 {
-    public NavMeshAgent enemy;
-    public Transform player;
+    public GameObject winScreen;
     public AttributesManager attributesManager;
-
 
     // Start is called before the first frame update
     void Start()
@@ -21,11 +17,9 @@ public class Taurus : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        enemy.SetDestination(player.position);
         if (attributesManager.health <= 0)
         {
-            SceneManager.LoadScene("Space");
+            winScreen.gameObject.SetActive(true);
         }
-
     }
 }

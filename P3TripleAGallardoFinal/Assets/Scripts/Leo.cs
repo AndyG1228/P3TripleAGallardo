@@ -11,6 +11,10 @@ public class Leo : MonoBehaviour
 
     public NavMeshAgent enemy;
     public Transform player;
+    public GameObject leo;
+    public GameObject taurus;
+
+    public AttributesManager attributesManager;
 
     // Start is called before the first frame update
     void Start()
@@ -22,5 +26,13 @@ public class Leo : MonoBehaviour
     void Update()
     {
         enemy.SetDestination(player.position);
+
+        if (attributesManager.health <= 0)
+        {
+            leo.SetActive(false);
+            taurus.SetActive(true);
+        }
+
+
     }
 }

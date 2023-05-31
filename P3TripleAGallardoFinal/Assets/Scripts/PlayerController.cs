@@ -1,11 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.UI;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
     //public bool fallen = false;
     //private bool float doom;
+
+    public AttributesManager attributesManager;
+    public GameObject loseScreen;
+    public GameObject player;
 
     private Rigidbody playerRB;
     public float horizontalInput;
@@ -37,6 +42,12 @@ public class PlayerController : MonoBehaviour
         {
             playerRB.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
             isOnGround = false;
+        }
+
+        if (attributesManager.health <= 0)
+        {
+            loseScreen.gameObject.SetActive(true);
+            player.SetActive(false);
         }
     }
 
