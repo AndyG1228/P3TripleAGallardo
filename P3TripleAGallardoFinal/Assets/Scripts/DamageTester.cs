@@ -10,7 +10,7 @@ public class DamageTester : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.F11))
+        /*if (Input.GetKeyDown(KeyCode.F11))
         {
             playerAtm.DealDamage(enemyAtm.gameObject);
         }
@@ -19,6 +19,6 @@ public class DamageTester : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.F12))
         {
             enemyAtm.DealDamage(playerAtm.gameObject);
-        }
+        }*/
     }
 }

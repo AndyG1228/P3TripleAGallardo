@@ -12,7 +12,7 @@ public class AttributesManager : MonoBehaviour
     Rigidbody2D rb;
     [SerializeField] FloatingHealthBar healthBar;
 
-    //dont want the healthBar to be public. What do I do? That is what it is stopping me from putting this on the enemy. Without the script on the enmemy, the health bar wont update
+  
 
     public void Awake()
     {
@@ -38,11 +38,23 @@ public class AttributesManager : MonoBehaviour
     }
 
 
+    public void RestartCurrentLevel() //testing -> not complete. 
+    {
+        if (health >= 0)
+        {
+            Debug.Log("GameOver");
+        }
+    }
+
+    
+
+
+
     // Start is called before the first frame update
     void Start()
     {
         health = maxHealth;
-        healthBar.UpdateHealthBar(health, maxHealth);
+        
     }
 
     // Update is called once per frame

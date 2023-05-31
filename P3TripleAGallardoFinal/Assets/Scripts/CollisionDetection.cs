@@ -4,14 +4,22 @@ using UnityEngine;
 
 public class CollisionDetection : MonoBehaviour
 {
+
+    //creating variables
     public WeaponController wc;
     public GameObject HitParticle;
     public AudioClip HammerAttackSound;
+    public AttributesManager playerAtm;
+    public AttributesManager enemyAtm;
 
+
+    //when enemy is being attacked, its health will decline
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Enemy" && wc.IsAttacking)
         {
+            playerAtm.DealDamage(enemyAtm.gameObject);
+
             Debug.Log(other.name);
             other.GetComponent<Animator>().SetTrigger("Hit");
 
@@ -20,15 +28,15 @@ public class CollisionDetection : MonoBehaviour
 
             AudioSource ac = GetComponent<AudioSource>();
             ac.PlayOneShot(HammerAttackSound);
+
+
+            
         }
+
+        
+
     }
-
-    //Input a script that checks if the player collided with the enemy
-        //if player collides with the enemy
-                //take damage (take damage player script)
-
-
-    //make a take damage player script 
+    
 
 
 
@@ -38,8 +46,11 @@ public class CollisionDetection : MonoBehaviour
     }
 
    
-    void Update()
+    void Update() //click f12 to deplete player's health
     {
-        
+        if (Input.GetKeyDown(KeyCode.F12))
+            {
+                enemyAtm.DealDamage(playerAtm.gameObject);
+            }
     }
 }
